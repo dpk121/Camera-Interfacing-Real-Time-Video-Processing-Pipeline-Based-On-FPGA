@@ -51,7 +51,7 @@
 
 # Boot time implementation method
 - Read pynq_image using SD card reader
-- Replace the present LEDs indication code with user desigend code. 
+- Replace the present LEDs indication code with user desigend code inside boot.py file. 
 
 # Misc
 - Hardware tool: PYNQ-Z2, Logitech 720, Intel realsense D435i, VGA monitor
