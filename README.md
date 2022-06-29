@@ -12,8 +12,11 @@
 
 - vivado tool 2019.2
 - PS GPIO Block connects hardware peripherals with GPIO to use them in Processing System(PS)
-- DMA IP transfer the data between DDR memory and Stram port (FIFO in this case) using AXI master and slave.
+- DMA IP transfer the data between DDR memory and Stream port (FIFO in this case) using AXI master and slave.
+- Objective of design is to transfer image frame to programmable logic FIFO from DDR memory. Transfer frame data into DDR memory is done using PYNQ dma send and receive channel.
+- PS GPIO provides ability to change camera using SW0 and SW1.
 - Genertae bitstram to use in overlay
+
 
 
 # Python Script for camera interfacing with DMA & GPIO block IP
@@ -59,7 +62,7 @@
 - Installation of pyrealsense: follow link
 	https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
 	
-- PYNQ-Z2 functionality
+- PYNQ-Z2 functionality of design
 
 		SW0 high- Logitech camera connected and LD0 On, rest LDs off
 		SW1 high- Realsense camera connected and LD1 On, rest LDs off
