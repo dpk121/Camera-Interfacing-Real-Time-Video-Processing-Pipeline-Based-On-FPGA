@@ -8,23 +8,25 @@
 
 # Hardware design Project  named with dma_ex
 
-two seperate IP merged 1) PS GPIO 2) DMA data transfer IP
+- two seperate IP merged 1) PS GPIO 2) DMA data transfer IP
 
-vivado tool 2019.2
+- vivado tool 2019.2
+- PS GPIO Block connects hardware peripherals with GPIO to use them in Processing System(PS)
+- DMA IP transfer the data between DDR memory and Stram port (FIFO in this case) using AXI master and slave.
+- Genertae bitstram to use in overlay
 
 
-
-# Python Script for camera interfacing
+# Python Script for camera interfacing with DMA IP
 
 - run the jupyter web page using either static or router connection.
 
  - PYNQ contains predefined code for using base overlay and other hardware ports. 
 
- - keep depth.py and distance.py file in same folder where python script is written to use realsense camera
+ - keep realsense_depth.py and detect distance.py file in same folder where python script is written to use realsense camera
 
  - python script is fully commented for better understanding. 
 
- - To use overlay in PS, generate bitstream file of IP using vivado tool and keep .bit and .hwh file in pynq overlay folder.
+ - To use user defined IP using overlay in PS, generate bitstream file of IP using vivado tool and keep .bit and .hwh file in pynq overlay folder.
  
 		To add file in pynq overlay follow below steps.
 			1) Turn on the board with SD card having pynq image using either static or router connection
@@ -38,3 +40,9 @@ vivado tool 2019.2
 			Note: Keep the name of both files same. Ex: dma_block_wrapper1.bit , dma_block_wrapper1.hwh
 			7) Now import overlay from pynq in jupyter. See provided code for better understanding
 - realsense require high power. So use power adapter for using realsense. Sometimes camera throws error when starting, restart board in such case.
+
+# Base Overlay in PYNQ
+- base overlay defines class of different ports LEDs, buttons, switches, HDMI IN, HDMI out etc.
+- CameraBase.py contains the python script of camera interfacing and display on VGA monitor.
+
+	NOTE: PYNQ does not support two overlay instantiation at same time. So different hardware IP is created to use switch, leds using PS GPIO.
