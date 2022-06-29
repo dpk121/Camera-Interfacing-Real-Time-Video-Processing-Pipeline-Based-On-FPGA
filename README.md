@@ -46,3 +46,4 @@
 - CameraBase.py contains the python script of camera interfacing and display on VGA monitor.
 
 	NOTE: PYNQ does not support two overlay instantiation at same time. So different hardware IP is created to use switch, leds using PS GPIO.
+- This script shows the video frames captured from camera on VGA monitor.
