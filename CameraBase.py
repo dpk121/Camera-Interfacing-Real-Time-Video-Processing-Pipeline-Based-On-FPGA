@@ -41,8 +41,8 @@ while(True):
         fps=1/time_diff
         fps_start_time=fps_end_time
     
-        #fps_text="FPS: {:.2f}".format(fps)
-        #cv2.putText(frame_vga,fps_text,(5,30),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,255),1)
+        fps_text="FPS: {:.2f}".format(fps)
+        cv2.putText(frame_vga,fps_text,(5,30),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,255),1)
 # Display webcam image via HDMI Out
         if (ret): 
             if (base.buttons[1].read()==1):
