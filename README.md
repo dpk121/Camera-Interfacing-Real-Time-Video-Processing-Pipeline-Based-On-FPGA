@@ -48,3 +48,10 @@
 
 	NOTE: PYNQ does not support two overlay instantiation at same time. So different hardware IP is created to use switch, leds using PS GPIO.
 - This script shows the video frames captured from camera on VGA monitor.
+
+# Misc
+- Hardware tool: PYNQ-Z2, Logitech 720, Intel realsense D435i, VGA monitor
+- Software tool: Vivaod 2019.2
+- Installation of pyrealsense: follow link
+	https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
+	
