@@ -21,6 +21,7 @@
 - run the jupyter web page using either static or router connection.
 
  - PYNQ contains predefined code for using base overlay and other hardware ports. 
+ - CameraScript.py defines the use of DMA and PS GPIO IP in PS and transfer data from PS to data FIFO PL for hardware processing.
 
  - keep realsense_depth.py and detect distance.py file in same folder where python script is written to use realsense camera
 
